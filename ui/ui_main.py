@@ -26,8 +26,11 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 600)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.verticalLayout_2 = QVBoxLayout(self.centralwidget)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_3 = QVBoxLayout(self.centralwidget)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setSpacing(0)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.l_header_widget = QWidget(self.centralwidget)
         self.l_header_widget.setObjectName(u"l_header_widget")
         self.horizontalLayout = QHBoxLayout(self.l_header_widget)
@@ -53,7 +56,22 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.execution)
 
 
-        self.verticalLayout_2.addWidget(self.l_header_widget, 0, Qt.AlignLeft)
+        self.horizontalLayout_3.addWidget(self.l_header_widget, 0, Qt.AlignLeft)
+
+        self.r_header_widget = QWidget(self.centralwidget)
+        self.r_header_widget.setObjectName(u"r_header_widget")
+        self.verticalLayout_2 = QVBoxLayout(self.r_header_widget)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.pushButton_2 = QPushButton(self.r_header_widget)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+
+        self.verticalLayout_2.addWidget(self.pushButton_2)
+
+
+        self.horizontalLayout_3.addWidget(self.r_header_widget, 0, Qt.AlignRight)
+
+
+        self.verticalLayout_3.addLayout(self.horizontalLayout_3)
 
         self.content_widget = QWidget(self.centralwidget)
         self.content_widget.setObjectName(u"content_widget")
@@ -68,7 +86,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.status_text)
 
 
-        self.verticalLayout_2.addWidget(self.content_widget)
+        self.verticalLayout_3.addWidget(self.content_widget)
 
         self.footer_widget = QWidget(self.centralwidget)
         self.footer_widget.setObjectName(u"footer_widget")
@@ -83,7 +101,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.progressBar)
 
 
-        self.verticalLayout_2.addWidget(self.footer_widget)
+        self.verticalLayout_3.addWidget(self.footer_widget)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -98,5 +116,6 @@ class Ui_MainWindow(object):
         self.set_pages.setText(QCoreApplication.translate("MainWindow", u"\ucabd\uc218 \uc124\uc815(F2)", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\uc800\uc7a5 \uc704\uce58 \uc124\uc815(F3)", None))
         self.execution.setText(QCoreApplication.translate("MainWindow", u"\uc2e4\ud589(F4)", None))
+        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"\ud14c\uc11c\ub799\ud2b8 \uacbd\ub85c \ucd94\uac00", None))
     # retranslateUi
 
