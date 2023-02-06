@@ -35,25 +35,25 @@ class Ui_MainWindow(object):
         self.l_header_widget.setObjectName(u"l_header_widget")
         self.horizontalLayout = QHBoxLayout(self.l_header_widget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.set_position = QPushButton(self.l_header_widget)
-        self.set_position.setObjectName(u"set_position")
+        self.set_position_btn = QPushButton(self.l_header_widget)
+        self.set_position_btn.setObjectName(u"set_position_btn")
 
-        self.horizontalLayout.addWidget(self.set_position)
+        self.horizontalLayout.addWidget(self.set_position_btn)
 
-        self.set_pages = QPushButton(self.l_header_widget)
-        self.set_pages.setObjectName(u"set_pages")
+        self.set_pages_btn = QPushButton(self.l_header_widget)
+        self.set_pages_btn.setObjectName(u"set_pages_btn")
 
-        self.horizontalLayout.addWidget(self.set_pages)
+        self.horizontalLayout.addWidget(self.set_pages_btn)
 
-        self.pushButton = QPushButton(self.l_header_widget)
-        self.pushButton.setObjectName(u"pushButton")
+        self.set_save_dir_btn = QPushButton(self.l_header_widget)
+        self.set_save_dir_btn.setObjectName(u"set_save_dir_btn")
 
-        self.horizontalLayout.addWidget(self.pushButton)
+        self.horizontalLayout.addWidget(self.set_save_dir_btn)
 
-        self.execution = QPushButton(self.l_header_widget)
-        self.execution.setObjectName(u"execution")
+        self.execution_btn = QPushButton(self.l_header_widget)
+        self.execution_btn.setObjectName(u"execution_btn")
 
-        self.horizontalLayout.addWidget(self.execution)
+        self.horizontalLayout.addWidget(self.execution_btn)
 
 
         self.horizontalLayout_3.addWidget(self.l_header_widget, 0, Qt.AlignLeft)
@@ -62,10 +62,10 @@ class Ui_MainWindow(object):
         self.r_header_widget.setObjectName(u"r_header_widget")
         self.verticalLayout_2 = QVBoxLayout(self.r_header_widget)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.pushButton_2 = QPushButton(self.r_header_widget)
-        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.set_tesseract_dir_btn = QPushButton(self.r_header_widget)
+        self.set_tesseract_dir_btn.setObjectName(u"set_tesseract_dir_btn")
 
-        self.verticalLayout_2.addWidget(self.pushButton_2)
+        self.verticalLayout_2.addWidget(self.set_tesseract_dir_btn)
 
 
         self.horizontalLayout_3.addWidget(self.r_header_widget, 0, Qt.AlignRight)
@@ -112,10 +112,10 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.set_position.setText(QCoreApplication.translate("MainWindow", u"\uc88c\ud45c \uc124\uc815\ud558\uae30(F1)", None))
-        self.set_pages.setText(QCoreApplication.translate("MainWindow", u"\ucabd\uc218 \uc124\uc815(F2)", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\uc800\uc7a5 \uc704\uce58 \uc124\uc815(F3)", None))
-        self.execution.setText(QCoreApplication.translate("MainWindow", u"\uc2e4\ud589(F4)", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"\ud14c\uc11c\ub799\ud2b8 \uacbd\ub85c \ucd94\uac00", None))
+        self.set_position_btn.setText(QCoreApplication.translate("MainWindow", u"\uc88c\ud45c \uc124\uc815\ud558\uae30(F1)", None))
+        self.set_pages_btn.setText(QCoreApplication.translate("MainWindow", u"\ucabd\uc218 \uc124\uc815(F2)", None))
+        self.set_save_dir_btn.setText(QCoreApplication.translate("MainWindow", u"\uc800\uc7a5 \uc704\uce58 \uc124\uc815(F3)", None))
+        self.execution_btn.setText(QCoreApplication.translate("MainWindow", u"\uc2e4\ud589(F4)", None))
+        self.set_tesseract_dir_btn.setText(QCoreApplication.translate("MainWindow", u"\ud14c\uc11c\ub799\ud2b8 \uacbd\ub85c \ucd94\uac00", None))
     # retranslateUi
 

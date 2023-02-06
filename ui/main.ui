@@ -24,28 +24,28 @@
        <widget class="QWidget" name="l_header_widget" native="true">
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
-          <widget class="QPushButton" name="set_position">
+          <widget class="QPushButton" name="set_position_btn">
            <property name="text">
             <string>좌표 설정하기(F1)</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="set_pages">
+          <widget class="QPushButton" name="set_pages_btn">
            <property name="text">
             <string>쪽수 설정(F2)</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="set_save_dir_btn">
            <property name="text">
             <string>저장 위치 설정(F3)</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="execution">
+          <widget class="QPushButton" name="execution_btn">
            <property name="text">
             <string>실행(F4)</string>
            </property>
@@ -58,7 +58,7 @@
        <widget class="QWidget" name="r_header_widget" native="true">
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="set_tesseract_dir_btn">
            <property name="text">
             <string>테서랙트 경로 추가</string>
            </property>
