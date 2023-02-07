@@ -1,10 +1,15 @@
 from PySide6.QtWidgets import QMainWindow, QMessageBox
 from PySide6.QtGui import QShortcut, QKeySequence
 from ui.ui_main import Ui_MainWindow
+from view.PosDialog import PosDialog
+from view.SetPageNumberDialog import SetPageNumberDialog
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     screen_position = []
+    page_number = []
+    save_dir = ''
+    tesseract_dir = ''
 
     def __init__(self, *args, object=None, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
@@ -27,16 +32,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         QShortcut(QKeySequence(QKeySequence.StandardKey.Close), self, self.close)
 
     def set_pos(self):
-        from pynput.mouse import Button, Controller
-               
-        mouse = Controller()
-        
-        start = mouse.press(Button.left)
-        end = mouse.release(Button.left)
-        print(start, end)
+        dialog = PosDialog()
+        if dialog.exec():
+            self.screen_position = dialog.get_pos()
+
+        if len(self.screen_position) == 4:
+            self.write_status('캡쳐 좌표 설정 성공', -1)
+        else:
+            self.write_status('캡쳐 좌표 설정 실패', -2)
+            self.screen_position.clear()
 
     def set_page_number(self):
-        print('page Click')
+        dialog = SetPageNumberDialog()
+
+        if dialog.exec():
+            self.page_number = dialog.get_page_number()
 
     def set_save_dir(self):
         print('save_dir Click')
@@ -46,3 +56,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def excute(self):
         print('excute CLick')
+
+    def write_status(self, txt: str = '', types: int = -1):
+        if not txt:
+            return
+
+        if types == -1:
+            txt = f"[성공] {txt}"
+        elif types == -2:
+            txt = f"[실패] {txt}"
+
+        status_text = self.status_text.toPlainText()
+        self.status_text.setPlainText(f"{status_text}{txt}\n")
