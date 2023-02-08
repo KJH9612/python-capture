@@ -66,4 +66,5 @@ class PosDialog(QDialog, pos_dialog):
     def get_pos(self):
         l_t_pos = eval(self.l_t_line_edit.text())
         r_b_pos = eval(self.r_b_line_edit.text())
+        print(list(l_t_pos + r_b_pos))
         return list(l_t_pos + r_b_pos)
